@@ -1,5 +1,10 @@
+import Hero from "@/components/hero"
+import IsoLogo from "@/components/ui/svg/logos"
+
+import { SchedulingButton } from "@/components/ui/buttons/scheduling-button"
+import { ArrowDown } from "@/components/ui/svg/arrows"
+import { Crown, CrownTwo } from "@/components/ui/svg/crowns"
 import { motion } from "framer-motion"
-import Hero from "./hero"
 
 const sectionVariants = {
 	hidden: { opacity: 0, y: 24 },
@@ -18,7 +23,7 @@ function MotionSection({
 	return (
 		<motion.section
 			id={id}
-			className={`min-h-dvh border border-green-800 ${className}`}
+			className={`min-h-dvh ${className}`}
 			variants={sectionVariants}
 			initial="hidden"
 			whileInView="show"
@@ -31,24 +36,43 @@ function MotionSection({
 }
 
 export default function Home() {
+	const SchedulingHandler = () => {
+		console.log("Clickeado")
+	}
+
 	return (
 		<main>
 			<MotionSection
 				id="home"
-				className="relative overflow-hidden"
+				className="relative overflow-hidden p-4 flex flex-col lg:flex-row gap-4"
 			>
-				<div className="hidden md:flex min-h-svh  items-center px-6 ">
-					<div className="max-w-xl">
-						<h2 className="text-5xl font-bold">Inspyrar</h2>
-						<p className="mt-4 text-lg text-muted-foreground">Pausa. Respira. Entiende lo que sientes.</p>
-					</div>
-				</div>
+				<div className="hidden md:flex md:flex-col items-center justify-center gap-4 lg:w-1/2">
+					<IsoLogo className="max-w-lg" />
 
-				{/* Reel:
-            - Mobile: centrado (mx-auto)
-            - Desktop: flotante (absolute right/bottom)
-        		*/}
-				<Hero className="mx-auto mt-6 md:absolute md:right-6 md:bottom-6 md:mt-0 " />
+					<h1 className="hidden lg:block text-3xl font-bold leading-tight">
+						No tienes que estar bien para empezar.
+					</h1>
+
+					<p className="hidden lg:block mt-3 text-base opacity-90">
+						Un espacio seguro para entender lo que sientes, acompañado y a tu ritmo.
+					</p>
+
+					<SchedulingButton
+						onSchedule={SchedulingHandler}
+						className="hidden lg:flex w-96 h-14 text-2xl "
+					/>
+				</div>
+				<div className="flex flex-col items-center lg:items-center justify-center gap-4 lg:w-1/2">
+					<Hero onSchedule={SchedulingHandler} />
+					<SchedulingButton
+						onSchedule={SchedulingHandler}
+						className="hidden md:flex lg:hidden w-96 h-14 text-2xl "
+					/>
+				</div>
+				{/* SVG's */}
+				<Crown className="hidden lg:block absolute w-auto h-40 top-10 right-10 rotate-40" />
+				<ArrowDown className="hidden lg:block absolute bottom-1/6 right-1/2 w-auto h-40" />
+				<CrownTwo className="hidden lg:block absolute w-auto h-20 top-1/8 left-1/12 -rotate-45 " />
 			</MotionSection>
 
 			<MotionSection

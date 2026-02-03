@@ -1,12 +1,14 @@
 import { motion } from "framer-motion"
 import { useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
+import { SchedulingButton } from "./ui/buttons/scheduling-button"
 
 type HeroProps = {
 	className?: string
+	onSchedule?: () => void
 }
 
-export default function Hero({ className }: HeroProps) {
+export default function Hero({ className, onSchedule }: HeroProps) {
 	const videoRef = useRef<HTMLVideoElement>(null)
 	const [oneShotMode, setOneShotMode] = useState(false)
 
@@ -29,7 +31,7 @@ export default function Hero({ className }: HeroProps) {
 	return (
 		<div
 			className={[
-				"relative z-10 w-[min(420px,92vw)] aspect-9/16 rounded-2xl overflow-hidden shadow-xl",
+				"relative z-10 w-[min(420px,92vw)] aspect-9/16 rounded-2xl overflow-hidden shadow-xl ",
 				className ?? "",
 			].join(" ")}
 		>
@@ -52,20 +54,26 @@ export default function Hero({ className }: HeroProps) {
 				transition={{ duration: 0.7, ease: "easeOut" }}
 				className="absolute inset-0 flex flex-col items-center justify-end text-center text-white p-6"
 			>
-				<h1 className="text-3xl font-bold leading-tight">No tienes que estar bien para empezar.</h1>
-				<p className="mt-3 text-base opacity-90">
+				<h1 className="md:hidden text-3xl font-bold leading-tight">No tienes que estar bien para empezar.</h1>
+				<p className="md:hidden mt-3 text-base opacity-90">
 					Un espacio seguro para entender lo que sientes, acompañado y a tu ritmo.
 				</p>
-
-				{!oneShotMode && (
-					<Button
-						onClick={playOnceWithSound}
-						variant="secondary"
-						className="mt-5"
-					>
-						🔊 Activar sonido
-					</Button>
-				)}
+				<div className="flex items-center justify-center gap-4">
+					<SchedulingButton
+						onSchedule={onSchedule}
+						className="mt-5 md:hidden"
+					/>
+					{!oneShotMode && (
+						<Button
+							onClick={playOnceWithSound}
+							variant="default"
+							className="mt-5"
+						>
+							<span>🔊</span>
+							<span className="hidden md:block"> Activar sonido</span>
+						</Button>
+					)}
+				</div>
 			</motion.div>
 		</div>
 	)
