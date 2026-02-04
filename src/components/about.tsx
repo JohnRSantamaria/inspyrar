@@ -1,5 +1,6 @@
 import AnimatedText from "./animated-text"
 import MotionSection from "./motion-section"
+import { ArrowDownTwo } from "./ui/svg/arrows"
 import { Avatar } from "./ui/svg/avatar"
 
 export default function About() {
@@ -38,6 +39,9 @@ export default function About() {
 			</div>
 			<div>
 				<p>Ahora quiero contarte cuál es la metodología para iniciar tu acompañamiento psicológico.</p>
+			</div>
+			<div className="relative">
+				<ArrowDownTwo className="absolute w-auto h-40 left-1/2" />
 			</div>
 		</MotionSection>
 	)

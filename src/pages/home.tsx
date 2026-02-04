@@ -44,7 +44,7 @@ export default function Home() {
 				</div>
 				{/* SVG's */}
 				<Crown className="hidden lg:block absolute w-auto h-40 top-10 right-10 rotate-40" />
-				<ArrowDown className="hidden lg:block absolute bottom-1/6 right-1/2 w-auto h-40" />
+				<ArrowDown className="absolute left-1/2 bottom-0 w-auto h-40" />
 				<CrownTwo className="hidden lg:block absolute w-auto h-20 top-1/8 left-1/12 -rotate-45 " />
 			</MotionSection>
 			<About />
