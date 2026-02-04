@@ -6,7 +6,7 @@ export function CrownTwo({ className, ...props }: SVGProps) {
 		<img
 			src="assets/crown_two.svg"
 			alt="Una flecha hacia la derecha"
-			className={(cn(""), className)}
+			className={cn("", className)}
 			{...props}
 		></img>
 	)
@@ -17,7 +17,7 @@ export function Crown({ className, ...props }: SVGProps) {
 		<img
 			src="assets/crown.svg"
 			alt="Una flecha hacia la derecha"
-			className={(cn(""), className)}
+			className={cn("", className)}
 			{...props}
 		></img>
 	)

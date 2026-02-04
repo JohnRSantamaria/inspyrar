@@ -10,10 +10,10 @@ type SchedulingButtonProps = {
 export function SchedulingButton({ onSchedule, className, ...props }: SchedulingButtonProps) {
 	return (
 		<Button
-			className={(cn(""), className)}
-			{...props}
+			className={cn("", className)}
 			variant="secondary"
 			onClick={onSchedule}
+			{...props}
 		>
 			Agendar
 			<FaExternalLinkAlt />

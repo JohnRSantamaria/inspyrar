@@ -122,6 +122,12 @@
 	}
 }
 
+@layer components {
+	#about p {
+		@apply text-lg leading-relaxed;
+	}
+}
+
 html {
 	scroll-behavior: smooth;
 }
