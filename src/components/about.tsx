@@ -1,6 +1,6 @@
 import AnimatedText from "./animated-text"
 import MotionSection from "./motion-section"
-import { ArrowDownTwo } from "./ui/svg/arrows"
+import { Separator } from "./ui/separator"
 import { Avatar } from "./ui/svg/avatar"
 
 export default function About() {
@@ -11,37 +11,50 @@ export default function About() {
 		>
 			<AnimatedText
 				text="Aquí no tienes que estar bien"
-				className="leading-tight text-2xl "
+				className="leading-tight text-2xl md:text-6xl "
 			/>
-			<div>
-				<p className="about-text ">
-					A veces solo necesitamos un espacio seguro para pausar, entender lo que sentimos y no hacerlo solos.
-				</p>
-				<p>
-					En Inspyrar te acompañamos a comprender tus emociones, sin presión, a tu ritmo, usando herramientas
-					psicológicas y hábitos que cuidan tu bienestar mental y emocional.
-				</p>
+			<div className="grid lg:grid-cols-2 gap-4 justify-center items-center ">
+				{/* avatar  */}
+				<div className="flex flex-col gap-4 bg-card rounded-2xl shadow-lg ">
+					<Avatar className="w-auto max-h-150 border-b-4 border-secondary" />
+					<span className="text-center p-4">
+						<p className="font-black">Soy Paula Chocontá Cardozo Psicóloga y fundadora de INSPYRAR</p>
+						<Separator />
+						<p>
+							Creo profundamente que el acompañamiento correcto puede abrir nuevas formas de vivir incluso
+							en momentos difíciles.
+						</p>
+					</span>
+				</div>
+				{/* mensaje */}
+				<div className="h-full flex flex-col items-center justify-center gap-8 lg:p-16 ">
+					{" "}
+					<div className="flex flex-col gap-4 text-center">
+						<h3 className="text-4xl text-secondary font-bold">¿Quiénes somos?</h3>
+						<p>
+							Somos un espacio seguro para ti, en donde puedes compartir tus experiencias, tus
+							pensamientos y emociones, un lugar en el que podrás ser tú mismo y recibir el apoyo que
+							necesitas.
+						</p>
+					</div>
+					<Separator />
+					<span className="text-center">
+						<p className="about-text">
+							A veces solo necesitamos un espacio seguro para pausar, entender lo que sentimos y no
+							hacerlo solos.
+						</p>
+						<p>
+							En Inspyrar te acompañamos a comprender tus emociones, sin presión, a tu ritmo, usando
+							herramientas psicológicas y hábitos que cuidan tu bienestar mental y emocional.
+						</p>
+					</span>
+				</div>
 			</div>
-			<div className="flex flex-col gap-4">
-				<Avatar />
-				<p className="text-center font-black">Soy Paula Chocontá Cardozo Psicóloga y fundadora de INSPYRAR</p>
+			<Separator />
+			<div className="flex items-center justify-center font-bold">
 				<p className="text-center">
-					Creo profundamente que el acompañamiento correcto puede abrir nuevas formas de vivir incluso en
-					momentos difíciles.
+					Ahora quiero contarte cuál es la metodología para iniciar tu acompañamiento psicológico.
 				</p>
-			</div>
-			<div className="flex flex-col gap-4">
-				<h3 className="text-xl text-secondary font-bold">¿Quiénes somos?</h3>
-				<p>
-					Somos un espacio seguro para ti, en donde puedes compartir tus experiencias, tus pensamientos y
-					emociones, un lugar en el que podrás ser tú mismo y recibir el apoyo que necesitas.
-				</p>
-			</div>
-			<div>
-				<p>Ahora quiero contarte cuál es la metodología para iniciar tu acompañamiento psicológico.</p>
-			</div>
-			<div className="relative">
-				<ArrowDownTwo className="absolute w-auto h-40 left-1/2" />
 			</div>
 		</MotionSection>
 	)

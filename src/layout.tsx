@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { Outlet } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 
-const SECTIONS = ["home", "about", "contact"] as const
+const SECTIONS = ["home", "about", "price"] as const
 type SectionId = (typeof SECTIONS)[number]
 
 function scrollTo(id: SectionId) {
@@ -60,10 +60,10 @@ export default function Layout() {
 					</Button>
 
 					<Button
-						variant={active === "contact" ? "default" : "ghost"}
-						onClick={() => scrollTo("contact")}
+						variant={active === "price" ? "default" : "ghost"}
+						onClick={() => scrollTo("price")}
 					>
-						Contacto
+						Costos
 					</Button>
 				</div>
 			</header>

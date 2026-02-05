@@ -2,11 +2,9 @@ import Hero from "@/components/hero"
 import IsoLogo from "@/components/ui/svg/logos"
 
 import { SchedulingButton } from "@/components/ui/buttons/scheduling-button"
-import { ArrowDown } from "@/components/ui/svg/arrows"
-import { Crown, CrownTwo } from "@/components/ui/svg/crowns"
 import MotionSection from "@/components/motion-section"
 import About from "@/components/about"
-import Contact from "@/components/contact"
+import Price from "@/components/price"
 
 export default function Home() {
 	const SchedulingHandler = () => {
@@ -43,12 +41,9 @@ export default function Home() {
 					/>
 				</div>
 				{/* SVG's */}
-				<Crown className="hidden lg:block absolute w-auto h-40 top-10 right-10 rotate-40" />
-				<ArrowDown className="hidden lg:block absolute bottom-1/6 right-1/2 w-auto h-40" />
-				<CrownTwo className="hidden lg:block absolute w-auto h-20 top-1/8 left-1/12 -rotate-45 " />
 			</MotionSection>
 			<About />
-			<Contact />
+			<Price />
 		</main>
 	)
 }

@@ -124,7 +124,14 @@
 
 @layer components {
 	#about p {
-		@apply text-lg leading-relaxed;
+		@apply text-lg md:text-2xl leading-relaxed;
+	}
+	#price p {
+		@apply text-lg md:text-2xl leading-relaxed;
+	}
+
+	#price p span {
+		@apply text-secondary font;
 	}
 }
 
