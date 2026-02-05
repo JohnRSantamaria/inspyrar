@@ -131,7 +131,7 @@
 	}
 
 	#price p span {
-		@apply text-secondary font;
+		@apply text-secondary;
 	}
 }
 
