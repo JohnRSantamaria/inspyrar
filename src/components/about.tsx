@@ -27,7 +27,7 @@ export default function About() {
 				<div className="h-full flex flex-col items-center justify-center gap-8 lg:p-16 ">
 					{" "}
 					<div className="flex flex-col gap-4 text-center">
-						<h3 className="text-4xl text-secondary font-bold">¿Quiénes somos?</h3>
+						<h3 className="text-xl text-secondary font-bold">¿Quiénes somos?</h3>
 						<p>
 							Somos un espacio seguro para ti, en donde puedes compartir tus experiencias, tus
 							pensamientos y emociones, un lugar en el que podrás ser tú mismo y recibir el apoyo que
