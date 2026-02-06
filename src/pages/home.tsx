@@ -12,7 +12,7 @@ export default function Home() {
 	}
 
 	return (
-		<main>
+		<>
 			<MotionSection
 				id="home"
 				className="relative overflow-hidden p-4 flex flex-col lg:flex-row gap-4"
@@ -44,6 +44,6 @@ export default function Home() {
 			</MotionSection>
 			<About />
 			<Price />
-		</main>
+		</>
 	)
 }

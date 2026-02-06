@@ -1,10 +1,10 @@
 import { cn } from "@/lib/utils"
 
-type IsoLogoProps = {
+type LogoProps = {
 	className?: string
 }
 
-function IsoLogo({ className, ...props }: IsoLogoProps) {
+export default function IsoLogo({ className, ...props }: LogoProps) {
 	return (
 		<img
 			src="logos/isologo.svg"
@@ -14,4 +14,14 @@ function IsoLogo({ className, ...props }: IsoLogoProps) {
 		/>
 	)
 }
-export default IsoLogo
+
+export function Logo({ className, ...props }: LogoProps) {
+	return (
+		<img
+			src="logos/logo_2.svg"
+			alt="Inspyrar isologo"
+			className={cn("", className)}
+			{...props}
+		/>
+	)
+}

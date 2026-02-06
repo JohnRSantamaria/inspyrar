@@ -7,7 +7,7 @@ export default function About() {
 	return (
 		<MotionSection
 			id="about"
-			className="bg-muted flex flex-col items-stretch pt-10 p-4 gap-4"
+			className="bg-muted flex flex-col items-center pt-10 p-4 gap-4 md:gap-8  lg:gap-16 lg:px-16"
 		>
 			<AnimatedText
 				text="Aquí no tienes que estar bien"
@@ -16,7 +16,7 @@ export default function About() {
 			<div className="grid lg:grid-cols-2 gap-4 justify-center items-center ">
 				{/* avatar  */}
 				<div className="flex flex-col gap-4 bg-card rounded-2xl shadow-lg ">
-					<Avatar className="w-auto max-h-150 border-b-4 border-secondary" />
+					<Avatar className="w-auto max-h-100 border-b-4 border-secondary" />
 					<span className="text-center p-4">
 						<p className="font-black">Soy Paula Chocontá Cardozo Psicóloga y fundadora de INSPYRAR</p>
 						<Separator />
