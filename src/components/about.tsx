@@ -11,7 +11,7 @@ export default function About() {
 		>
 			<AnimatedText
 				text="Aquí no tienes que estar bien"
-				className="leading-tight text-2xl! md:text-6xl! "
+				className="leading-tight text-6xl! md:text-6xl! "
 			/>
 			<div className="grid lg:grid-cols-2 gap-4 justify-center items-center ">
 				{/* avatar  */}
