@@ -9,10 +9,7 @@ export default function About() {
 			id="about"
 			className="bg-muted flex flex-col items-center pt-10 p-4 gap-4 md:gap-8  lg:gap-16 lg:px-16"
 		>
-			<AnimatedText
-				text="Aquí no tienes que estar bien"
-				className="leading-tight text-6xl! md:text-6xl! "
-			/>
+			<AnimatedText text="Aquí no tienes que estar bien" />
 			<div className="grid lg:grid-cols-2 gap-4 justify-center items-center ">
 				{/* avatar  */}
 				<div className="flex flex-col gap-4 bg-card rounded-2xl shadow-lg ">

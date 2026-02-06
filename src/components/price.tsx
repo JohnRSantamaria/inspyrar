@@ -37,10 +37,7 @@ export default function Price() {
 			id="price"
 			className="flex flex-col items-stretch pt-10 p-4 gap-4"
 		>
-			<AnimatedText
-				text="Costos"
-				className="leading-tight text-2xl! md:text-6xl!"
-			/>
+			<AnimatedText text="Costos" />
 
 			<p className="font-bold text-center max-w-3xl mx-auto">
 				Queremos que los precios de nuestros servicios de acompañamiento psicológico se acomoden a tu bolsillo,

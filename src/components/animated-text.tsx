@@ -31,7 +31,10 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ text, className, ...props }
 	return (
 		<div className="w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden sm:py-0">
 			<motion.h2
-				className={cn("inline-block w-full font-bold capitalize text-8xl dark:text-light", className)}
+				className={cn(
+					"inline-block w-full font-bold capitalize text-4xl! md:text-6xl! leading-tight",
+					className
+				)}
 				variants={quote}
 				initial="initial"
 				whileInView="animate"
