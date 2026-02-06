@@ -39,7 +39,7 @@ export default function Price() {
 		>
 			<AnimatedText
 				text="Costos"
-				className="leading-tight text-2xl md:text-6xl"
+				className="leading-tight text-2xl! md:text-6xl!"
 			/>
 
 			<p className="font-bold text-center max-w-3xl mx-auto">
