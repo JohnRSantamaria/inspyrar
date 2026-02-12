@@ -21,6 +21,8 @@
 	--color-primary-foreground: var(--primary-foreground);
 	--color-secondary: var(--secondary);
 	--color-secondary-foreground: var(--secondary-foreground);
+	--color-tertiary: var(--tertiary);
+	--color-tertiary-foreground: var(--tertiary-foreground);
 	--color-muted: var(--muted);
 	--color-muted-foreground: var(--muted-foreground);
 	--color-accent: var(--accent);
@@ -56,6 +58,8 @@
 	--primary-foreground: oklch(0.985 0 0);
 	--secondary: #580e0e;
 	--secondary-foreground: oklch(0.985 0 0);
+	--tertiary: oklch(26.862% 0.00003 271.152);
+	--tertiary-foreground: oklch(98.623% 0.01411 84.538);
 	--muted: oklch(0.97 0 0);
 	--muted-foreground: oklch(0.556 0 0);
 	--accent: oklch(0.97 0 0);
@@ -120,18 +124,15 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+
+	p span {
+		@apply font-bold text-secondary;
+	}
 }
 
 @layer components {
 	#about p {
 		@apply text-lg md:text-2xl leading-relaxed;
-	}
-	#price p {
-		@apply text-lg md:text-2xl leading-relaxed;
-	}
-
-	#price p span {
-		@apply text-secondary;
 	}
 
 	.icons {
@@ -139,6 +140,7 @@
 	}
 }
 
+/* Scroll/UX */
 html {
 	scroll-behavior: smooth;
 }
@@ -149,4 +151,17 @@ section {
 
 button {
 	cursor: pointer;
+}
+
+/* =========================
+   3D FLIP CARD UTILITIES
+   (para tu ServiceCard)
+   ========================= */
+@layer utilities {
+	.perspective-1000 {
+		perspective: 1000px;
+	}
+	.backface-hidden {
+		backface-visibility: hidden;
+	}
 }

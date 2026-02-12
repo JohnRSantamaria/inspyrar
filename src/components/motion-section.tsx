@@ -11,7 +11,7 @@ export default function MotionSection({ id, children, className, ...props }: Mot
 	return (
 		<section
 			id={id}
-			className={cn("min-h-dvh", className)}
+			className={cn("overflow-hidden min-h-dvh flex flex-col items-center justify-normal p-4 gap-4", className)}
 			{...props}
 		>
 			{children}

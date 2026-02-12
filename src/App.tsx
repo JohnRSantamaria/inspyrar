@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 import Layout from "./layout"
-import Home from "./pages/home"
 import NotFound from "./pages/not-found"
+import Page from "./pages/home"
 
 export default function App() {
 	return (
@@ -9,8 +9,9 @@ export default function App() {
 			<Route element={<Layout />}>
 				<Route
 					path="/"
-					element={<Home />}
+					element={<Page />}
 				/>
+
 				<Route
 					path="*"
 					element={<NotFound />}

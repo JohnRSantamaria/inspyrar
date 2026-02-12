@@ -4,15 +4,18 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 
-import { FaTiktok, FaInstagram, FaFacebook, FaEnvelope } from "react-icons/fa"
+import { FaTiktok, FaInstagram, FaFacebook, FaEnvelope, FaWhatsapp } from "react-icons/fa"
 
-const SECTIONS = ["home", "about", "price"] as const
+const SECTIONS = ["home", "about", "who_are_we", "services", "testimonies", "faq"] as const
 type SectionId = (typeof SECTIONS)[number]
 
 const NAV_ITEMS = [
 	{ id: "home" as SectionId, label: "Inicio" },
 	{ id: "about" as SectionId, label: "Nosotros" },
-	{ id: "price" as SectionId, label: "Costos" },
+	{ id: "who_are_we" as SectionId, label: "¿Quiénes somos?" },
+	{ id: "services" as SectionId, label: "Servicios" },
+	{ id: "testimonies" as SectionId, label: "Testimonios" },
+	{ id: "faq" as SectionId, label: "Preguntas frecuentes" },
 ]
 
 function scrollTo(id: SectionId) {
@@ -91,10 +94,18 @@ export default function Header() {
 						>
 							<FaEnvelope className="icons" />
 						</a>
+						<a
+							href="https://wa.me/3028622671?text=Hola, necesito mas información. "
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="ir a Instragram"
+						>
+							<FaWhatsapp className="icons" />
+						</a>
 					</div>
 
 					{/* Desktop Navigation */}
-					<nav className="hidden md:flex gap-2">
+					<nav className="hidden lg:flex gap-2">
 						{NAV_ITEMS.map((item) => (
 							<Button
 								key={item.id}
@@ -113,7 +124,7 @@ export default function Header() {
 					>
 						<SheetTrigger
 							asChild
-							className="md:hidden"
+							className="lg:hidden"
 						>
 							<Button
 								variant="ghost"

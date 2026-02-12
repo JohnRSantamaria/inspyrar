@@ -4,4 +4,5 @@ export type PriceCardProps = {
 	unitValue?: string
 	totalValue: string
 	cta?: string
+	onCtaClick?: () => void
 }
