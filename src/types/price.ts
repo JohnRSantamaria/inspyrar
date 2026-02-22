@@ -1,6 +1,5 @@
 export type PriceCardProps = {
-	title: string
-	description: string
+	ref: string
 	unitValue?: string
 	totalValue: string
 	cta?: string

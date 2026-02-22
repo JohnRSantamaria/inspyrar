@@ -57,9 +57,9 @@ export default function Hero({ className, onSchedule }: HeroProps) {
 					transition={{ duration: 0.7, ease: "easeOut" }}
 					className="absolute inset-0 flex flex-col items-center justify-end text-center text-white p-6"
 				>
-					<h1 className="md:hidden text-2xl font-bold leading-tight">
+					<h2 className="md:hidden font-bold leading-tight">
 						No necesitas tener todas las respuestas para empezar
-					</h1>
+					</h2>
 					<p className="md:hidden mt-3 opacity-90">
 						Un espacio seguro para entender lo que sientes, acompañado y a tu ritmo.
 					</p>

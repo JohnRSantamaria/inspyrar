@@ -2,7 +2,7 @@ import IsoLogo from "./ui/svg/logos"
 
 export default function Footer() {
 	return (
-		<footer className="w-full border-2 grid grid-rows-3 md:grid-cols-3 md:grid-rows-1 min-h-20 bg-muted select-none mt-16">
+		<footer className="w-full border-2 grid grid-rows-3 md:grid-cols-3 md:grid-rows-1 min-h-20 bg-muted select-none mt-4 py-8 md:py-4">
 			<span className="flex items-center justify-center">
 				{new Date().getFullYear()} &copy; All Rights Reserved.
 			</span>

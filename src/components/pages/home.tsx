@@ -15,13 +15,13 @@ export default function Home() {
 			{/* Desktop */}
 			<div className="hidden lg:flex flex-col items-center justify-evenly w-[min(420px,92vw)] aspect-9/16 text-center">
 				<IsoLogo className="hidden lg:flex" />
-				<h1 className="font-bold lg:text-2xl">
+				<h2 className="font-bold md:text-xl ">
 					Un espacio seguro para entender lo que sientes, acompañado y a tu ritmo.
-				</h1>
-				<p className="lg:text-xl">No necesitas tener todas las respuestas para empezar</p>
+				</h2>
+				<p className="md:text-lg">No necesitas tener todas las respuestas para empezar.</p>
 				<SchedulingButton
 					onSchedule={SchedulingHandler}
-					className="hidden lg:flex w-96 h-14 text-2xl "
+					className="hidden lg:flex w-96 h-14 "
 				/>
 			</div>
 			{/* Mobile - Tablet*/}
@@ -29,7 +29,7 @@ export default function Home() {
 				<Hero onSchedule={SchedulingHandler} />
 				<SchedulingButton
 					onSchedule={SchedulingHandler}
-					className="hidden md:flex lg:hidden w-96 h-14 text-2xl "
+					className="hidden md:flex lg:hidden w-96 h-14"
 				/>
 			</div>
 		</MotionSection>

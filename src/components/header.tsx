@@ -6,13 +6,12 @@ import { Menu } from "lucide-react"
 
 import { FaTiktok, FaInstagram, FaFacebook, FaEnvelope, FaWhatsapp } from "react-icons/fa"
 
-const SECTIONS = ["home", "about", "who_are_we", "services", "testimonies", "faq"] as const
+const SECTIONS = ["home", "about", "services", "testimonies", "faq"] as const
 type SectionId = (typeof SECTIONS)[number]
 
 const NAV_ITEMS = [
 	{ id: "home" as SectionId, label: "Inicio" },
 	{ id: "about" as SectionId, label: "Nosotros" },
-	{ id: "who_are_we" as SectionId, label: "¿Quiénes somos?" },
 	{ id: "services" as SectionId, label: "Servicios" },
 	{ id: "testimonies" as SectionId, label: "Testimonios" },
 	{ id: "faq" as SectionId, label: "Preguntas frecuentes" },
@@ -61,7 +60,7 @@ export default function Header() {
 	return (
 		<header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur">
 			<div className="container mx-auto px-4">
-				<div className="flex h-16 items-center justify-between">
+				<div className="flex h-16 items-center justify-between gap-4">
 					{/* Logo */}
 					<div className="shrink-0 flex gap-4">
 						<a
@@ -111,6 +110,7 @@ export default function Header() {
 								key={item.id}
 								variant={active === item.id ? "default" : "ghost"}
 								onClick={() => handleNavClick(item.id)}
+								className="text-md"
 							>
 								{item.label}
 							</Button>

@@ -7,7 +7,7 @@ import type { PriceCardProps } from "@/types/price"
 import MotionSection from "../motion-section"
 import AnimatedText from "../animated-text"
 
-function ServiceCard({ title, description, unitValue, totalValue, cta = "Agendar", onCtaClick }: PriceCardProps) {
+function ServiceCard({ ref, unitValue, totalValue, cta = "Agendar", onCtaClick }: PriceCardProps) {
 	const [flipped, setFlipped] = useState(false)
 
 	const handleCardClick = () => {
@@ -37,10 +37,10 @@ function ServiceCard({ title, description, unitValue, totalValue, cta = "Agendar
 					className="absolute inset-0 flex items-center justify-center p-6 backface-hidden"
 					style={{ backfaceVisibility: "hidden" }}
 				>
-					<p className="text-center leading-relaxed">
-						<span className="font-bold">{title}: </span>
-						{description}
-					</p>
+					<div
+						className="absolute inset-0 bg-cover bg-center rounded-xl"
+						style={{ backgroundImage: ref }}
+					/>
 				</Card>
 
 				{/* BACK */}
@@ -108,38 +108,34 @@ export default function Services() {
 		>
 			<AnimatedText text="Servicios" />
 
-			<p className="font-bold text-center max-w-350 text-xl lg:text-2xl w-full">
+			<p className="font-bold text-center max-w-350 w-full md:text-xl">
 				Queremos que los precios de nuestros servicios de acompañamiento psicológico se acomoden a tu{" "}
 				<span>bolsillo</span>, adquiere alguno de nuestros
 				<span> paquetes</span> y disfruta beneficios adicionales.
 			</p>
 
-			<div className="w-full max-w-6xl grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+			<div className="w-full max-w-6xl grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 md:text-lg">
 				<ServiceCard
-					title="Unidad"
-					description="Si prefieres pagar tu sesión de manera semanal una a una"
+					ref="url('/assets/sesiones/sesion-1.webp')"
 					totalValue="$72.000"
 					onCtaClick={handleAgendarUnidad}
 				/>
 
 				<ServiceCard
-					title="DUO"
-					description="Si prefieres pagar 2 sesiones de manera quincenal"
+					ref="url('/assets/sesiones/sesion-2.webp')"
 					unitValue="$67.500"
 					totalValue="$135.000"
 					onCtaClick={handleAgendarDuo}
 				/>
 
 				<ServiceCard
-					title="TETRA"
-					description="Si prefieres pagar un paquete mensual (4 sesiones)"
+					ref="url('/assets/sesiones/sesion-4.webp')"
 					unitValue="$62.500"
 					totalValue="$250.000"
 					onCtaClick={handleAgendarTetra}
 				/>
 				<ServiceCard
-					title="Octa"
-					description="Si prefieres pagar 2 meses consecutivos (8 sesiones)"
+					ref="url('/assets/sesiones/sesion-8.webp')"
 					unitValue="$61.250"
 					totalValue="$490.000"
 					onCtaClick={handleAgendarOcta}
