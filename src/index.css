@@ -120,6 +120,40 @@
 }
 
 @layer components {
+	/* WhatsApp Bubble (Mensaje)  */
+
+	.wa-bubble {
+		@apply relative max-w-130 w-fit px-4 py-3 bg-card text-foreground shadow-sm;
+		border-radius: 16px 16px 6px 16px; /* look WA */
+	}
+
+	/* “piquito” (lado derecho / enviado) */
+	.wa-bubble::after {
+		content: "";
+		position: absolute;
+		right: -8px;
+		bottom: 10px;
+		width: 0;
+		height: 0;
+		border-left: 10px solid var(--card);
+		border-top: 8px solid transparent;
+		border-bottom: 8px solid transparent;
+	}
+
+	/* Variante recibido (lado izquierdo) */
+	.wa-bubble-left {
+		@apply bg-background;
+		border-radius: 16px 16px 16px 6px;
+	}
+
+	.wa-bubble-left::after {
+		left: -8px;
+		right: auto;
+		border-left: none;
+		border-right: 10px solid var(--background);
+		border-top: 8px solid transparent;
+		border-bottom: 8px solid transparent;
+	}
 	#about p {
 		@apply leading-relaxed;
 	}

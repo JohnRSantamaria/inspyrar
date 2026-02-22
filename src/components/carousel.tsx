@@ -47,11 +47,7 @@ export function MotionCarousel({ slides, className }: { slides: Slide[]; classNa
 								style={{ backgroundImage: `url(${s.imageUrl})` }}
 							/>
 
-							{/* Overlay sutil */}
-							<div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/45 via-black/10 to-transparent" />
-
-							{/* Contenido abajo */}
-							<div className="absolute bottom-0 left-0 right-0 p-5 text-white">
+							<div className="absolute top-20 inset-x-4 bg-background p-4 shadow-lg rounded-2xl rounded-tr-none">
 								<h3 className="text-lg font-semibold">{s.title}</h3>
 								<p className="mt-1 text-sm/relaxed opacity-95">{s.description}</p>
 							</div>
