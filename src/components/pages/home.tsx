@@ -16,9 +16,9 @@ export default function Home() {
 			{/* Desktop */}
 			<div className="hidden lg:flex flex-col items-center justify-evenly w-[min(420px,92vw)] aspect-9/16 text-center">
 				<IsoLogo className="hidden lg:flex" />
-				<h2 className="font-bold md:text-xl ">
+				<h1 className="font-bold md:text-xl ">
 					Un espacio seguro para entender lo que sientes, acompañado y a tu ritmo.
-				</h2>
+				</h1>
 				<p className="md:text-lg">No necesitas tener todas las respuestas para empezar.</p>
 				<Button className="hidden lg:flex w-96 h-14 " />
 			</div>
