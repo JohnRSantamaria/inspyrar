@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { SchedulingButton } from "../ui/buttons/scheduling-button"
+
 import IsoLogo from "../ui/svg/logos"
 
 type HeroProps = {
@@ -9,7 +9,7 @@ type HeroProps = {
 	onSchedule?: () => void
 }
 
-export default function Hero({ className, onSchedule }: HeroProps) {
+export default function Hero({ className }: HeroProps) {
 	const videoRef = useRef<HTMLVideoElement>(null)
 	const [oneShotMode, setOneShotMode] = useState(false)
 
@@ -64,10 +64,7 @@ export default function Hero({ className, onSchedule }: HeroProps) {
 						Un espacio seguro para entender lo que sientes, acompañado y a tu ritmo.
 					</p>
 					<div className="flex items-center justify-center gap-4">
-						<SchedulingButton
-							onSchedule={onSchedule}
-							className="mt-5 md:hidden"
-						/>
+						<Button className="mt-5 md:hidden" />
 						{!oneShotMode && (
 							<Button
 								onClick={playOnceWithSound}
