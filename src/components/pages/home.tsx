@@ -1,5 +1,6 @@
 import MotionSection from "../motion-section"
 import { Button } from "../ui/button"
+import HeroButton from "../ui/buttons/hero-button"
 
 import IsoLogo from "../ui/svg/logos"
 import Hero from "./hero"
@@ -20,11 +21,15 @@ export default function Home() {
 					Un espacio seguro para entender lo que sientes, acompañado y a tu ritmo.
 				</h1>
 				<p className="md:text-lg">No necesitas tener todas las respuestas para empezar.</p>
-				<Button className="hidden lg:flex w-96 h-14 " />
+				{/* <Button className="hidden lg:flex w-96 h-14 " /> */}
+				<HeroButton
+					OnScheduling={SchedulingHandler}
+					className="bg-red-950 mt-5 text-2xl px-6 py-2"
+				/>
 			</div>
 			{/* Mobile - Tablet*/}
 			<div className="flex flex-col gap-4">
-				<Hero onSchedule={SchedulingHandler} />
+				<Hero OnScheduling={SchedulingHandler} />
 				<Button className="hidden md:flex lg:hidden w-96 h-14" />
 			</div>
 		</MotionSection>

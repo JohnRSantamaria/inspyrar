@@ -31,7 +31,7 @@ export function MotionCarousel({ slides, className }: { slides: Slide[]; classNa
 				{slides.map((s) => (
 					<CarouselItem
 						key={s.id}
-						className="md:basis-1/2 lg:basis-1/4"
+						className="md:basis-1/2  xl:basis-1/4"
 					>
 						<motion.div
 							variants={itemVariants}
@@ -43,7 +43,7 @@ export function MotionCarousel({ slides, className }: { slides: Slide[]; classNa
 						>
 							{/* Imagen de fondo */}
 							<div
-								className="h-180  bg-cover bg-center"
+								className="h-180 bg-cover bg-center"
 								style={{ backgroundImage: `url(${s.imageUrl})` }}
 							/>
 
