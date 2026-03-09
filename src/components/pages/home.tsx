@@ -1,37 +1,37 @@
-import MotionSection from "../motion-section"
-import { Button } from "../ui/button"
-import HeroButton from "../ui/buttons/hero-button"
+import MotionSection from "../motion-section";
+import { Button } from "../ui/button";
+import HeroButton from "../ui/buttons/hero-button";
 
-import IsoLogo from "../ui/svg/logos"
-import Hero from "./hero"
+import IsoLogo from "../ui/svg/logos";
+import Hero from "./hero";
 
 export default function Home() {
-	const SchedulingHandler = () => {
-		console.log("Clickeado")
-	}
-	return (
-		<MotionSection
-			id="home"
-			className="flex-row items-center justify-evenly"
-		>
-			{/* Desktop */}
-			<div className="hidden lg:flex flex-col items-center justify-evenly w-[min(420px,92vw)] aspect-9/16 text-center">
-				<IsoLogo className="hidden lg:flex" />
-				<h1 className="font-bold md:text-xl ">
-					Un espacio seguro para entender lo que sientes, acompañado y a tu ritmo.
-				</h1>
-				<p className="md:text-lg">No necesitas tener todas las respuestas para empezar.</p>
-				{/* <Button className="hidden lg:flex w-96 h-14 " /> */}
-				<HeroButton
-					OnScheduling={SchedulingHandler}
-					className="bg-red-950 mt-5 text-2xl px-6 py-2"
-				/>
-			</div>
-			{/* Mobile - Tablet*/}
-			<div className="flex flex-col gap-4">
-				<Hero OnScheduling={SchedulingHandler} />
-				<Button className="hidden md:flex lg:hidden w-96 h-14" />
-			</div>
-		</MotionSection>
-	)
+  const SchedulingHandler = () => {
+    window.open("https://mpago.li/1jTFnTa", "_blank");
+  };
+  return (
+    <MotionSection id="home" className="flex-row items-center justify-evenly">
+      {/* Desktop */}
+      <div className="hidden lg:flex flex-col items-center justify-evenly w-[min(420px,92vw)] aspect-9/16 text-center">
+        <IsoLogo className="hidden lg:flex" />
+        <h1 className="font-bold md:text-xl ">
+          Un espacio seguro para entender lo que sientes, acompañado y a tu
+          ritmo.
+        </h1>
+        <p className="md:text-lg">
+          No necesitas tener todas las respuestas para empezar.
+        </p>
+        {/* <Button className="hidden lg:flex w-96 h-14 " /> */}
+        <HeroButton
+          OnScheduling={SchedulingHandler}
+          className="bg-red-950 mt-5 text-2xl px-6 py-2"
+        />
+      </div>
+      {/* Mobile - Tablet*/}
+      <div className="flex flex-col gap-4">
+        <Hero OnScheduling={SchedulingHandler} />
+        <Button className="hidden md:flex lg:hidden w-96 h-14" />
+      </div>
+    </MotionSection>
+  );
 }
