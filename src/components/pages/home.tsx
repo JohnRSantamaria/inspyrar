@@ -7,7 +7,7 @@ import Hero from "./hero";
 
 export default function Home() {
   const SchedulingHandler = () => {
-    window.open("https://mpago.li/1jTFnTa", "_blank");
+    window.open("https://mpago.li/288Bcu6", "_blank");
   };
   return (
     <MotionSection id="home" className="flex-row items-center justify-evenly">

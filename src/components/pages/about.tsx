@@ -49,7 +49,7 @@ export default function About() {
               Somos un equipo de psicólogos que:
             </p>
 
-            <ul className="mt-4 space-y-3 pl-4">
+            <ul className="mt-4 space-y-3 pl-4 text-left">
               <li className="flex items-center gap-2">
                 {" "}
                 <span className="text-green-600">✅</span> Escuchamos antes de
